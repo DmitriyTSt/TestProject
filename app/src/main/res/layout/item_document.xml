@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/file_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="24dp"
+            app:srcCompat="@drawable/file"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/file_icon"
+            android:layout_toStartOf="@id/btn_info"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/file_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorSecondaryDark"
+                android:text="Название файла.pdf"/>
+            <RelativeLayout
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/icon_time"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_time"/>
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/icon_time"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12.10.2018 14:44 ⋅ 48 Гб"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/btn_info"
+            app:srcCompat="@drawable/ic_more_vert_black_24dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_margin="12dp"
+            android:padding="12dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_toEndOf="@id/file_icon"
+            android:layout_below="@id/btn_info"
+            android:alpha="0.2"
+            android:background="@color/colorGray"/>
+    </RelativeLayout>
+</layout>
